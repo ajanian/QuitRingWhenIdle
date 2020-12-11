@@ -7,3 +7,11 @@ This script can be run on any interval using launchd, cron or any other schedule
 I run it in launchd every minute with a 300 second timeout.  When my computer is idle for 5 minutes the Ring app will be quit so that the regular idle timer processes of the mac will be able to do their thing.
 
 I also run another script to start the ring app when the computer is unlocked.
+
+The first and only argument of the script is the minimum number of idle seconds before ring is quit.
+
+I run like this:
+
+```
+./QuitRingIfIdle.sh 300
+```
