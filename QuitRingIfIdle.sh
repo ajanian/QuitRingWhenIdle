@@ -8,6 +8,7 @@ fi
 
 echo "Threshold: $threshold"
 
+# code for idle seconds from https://gist.github.com/Neil-Smithline/2075463
 idleSeconds=$(/usr/sbin/ioreg -c IOHIDSystem | /usr/bin/awk '/HIDIdleTime/ {print int($NF/1000000000); exit}')
 
 echo "IdleSeconds: $idleSeconds"
